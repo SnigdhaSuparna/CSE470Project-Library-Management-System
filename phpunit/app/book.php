@@ -33,5 +33,10 @@ class User
 		return $this->book_id;
 	}
 
+    public function getBookid()
+	{
+		$this->book_id = trim($bookid);
+	}
+
 
 }
