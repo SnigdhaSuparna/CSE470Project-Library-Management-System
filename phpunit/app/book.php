@@ -2,25 +2,36 @@
 
 namespace App;
 
-class book
+class User
 {
-    public $book_title;
-    public $book_author;
-    public $late_fine;
-    public $difference;
+	public $book_name;
+	public $author_name;
+    public $book_id;
 
-    public function setValues($actualReturnDate, $currentDate)
-    {
-        $this->return_Date = $actualReturnDate;
-        $this->current_Date = $currentDate;
-    }
-    
-    public function getFineAmount()
-    {
-        $this->difference = $this->current_Date - $this->return_Date;
-        
-            $this->$late_fine = (difference/(60*60*24))*0.1;
-        return $this->$late_fine;
-    }
+
+
+	public function setBookName($bookName)
+	{
+		$this->book_name = trim($bookName);
+
+	}
+
+	public function getbookName()
+	{
+		return $this->book_name;
+	}
+
+
+	public function setauthorName($authorName)
+	{
+		$this->author_name = trim($authorName);
+
+	}
+
+	public function getBookid()
+	{
+		return $this->book_id;
+	}
+
 
 }
